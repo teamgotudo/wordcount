@@ -1,0 +1,16 @@
+<h1>Counted</h1>
+
+<a href="{% url 'home' %}">Return to HomePage</a>
+
+<h2>Your Entered Text is Here</h2>
+{{ fulltext }}
+<br/><br/>
+
+<h2>Total words</h2>
+{{ words }}
+<br/><br/>
+
+<h2>Total Occurence of Each Particular Word</h2>
+{% for word,value in worddictionary %}
+<h4>{{ word }} = {{ value }}</h4>
+{% endfor %}
